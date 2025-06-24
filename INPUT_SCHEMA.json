@@ -7,13 +7,15 @@
       "title": "Upwork User Name",
       "type": "string",
       "description": "Your first name as used on Upwork.",
-      "minLength": 1
+      "minLength": 1,
+      "editor": "textfield"
     },
     "UPWORK_USERNAME": {
       "title": "Upwork Username (Email)",
       "type": "string",
       "description": "Your Upwork account email address.",
-      "format": "email"
+      "format": "email",
+      "editor": "textfield"
     },
     "UPWORK_PASSWORD": {
       "title": "Upwork Password",

@@ -3,6 +3,19 @@
   "name": "upwork-best-matches",
   "language": "python",
   "title": "Upwork Best Matches Scraper",
-  "main": "upwork_best_matches_scraper.py",
-  "buildTag": "python3.10"
+  "description": "Scrapes Upwork best matches using user credentials",
+  "version": "0.1",
+  "environmentVariables": [
+    { "name": "UPWORK_USER_NAME", "description": "Your Upwork username/email" },
+    { "name": "UPWORK_USERNAME", "description": "Redundant but used internally" },
+    { "name": "UPWORK_PASSWORD", "description": "Your Upwork password" },
+    { "name": "CHROME_VERSIONS", "description": "Comma-separated Chrome versions like 90,123" },
+    { "name": "MAX_ATTEMPTS", "description": "Number of retry attempts" }
+  ],
+  "dockerfile": "./Dockerfile",
+  "defaultRunOptions": {
+    "build": "latest",
+    "memoryMbytes": 2048,
+    "timeoutSecs": 300
+  }
 }

@@ -1,21 +1,35 @@
 {
-  "schemaVersion": 1,
-  "name": "upwork-best-matches",
-  "language": "python",
+  "actorSpecification": 1,
+  "name": "upwork-scraper",
   "title": "Upwork Best Matches Scraper",
-  "description": "Scrapes Upwork best matches using user credentials",
+  "description": "Scrapes best match jobs from Upwork using login credentials",
   "version": "0.1",
-  "environmentVariables": [
-    { "name": "UPWORK_USER_NAME", "description": "Your Upwork username/email" },
-    { "name": "UPWORK_USERNAME", "description": "Redundant but used internally" },
-    { "name": "UPWORK_PASSWORD", "description": "Your Upwork password" },
-    { "name": "CHROME_VERSIONS", "description": "Comma-separated Chrome versions like 90,123" },
-    { "name": "MAX_ATTEMPTS", "description": "Number of retry attempts" }
-  ],
   "dockerfile": "./Dockerfile",
   "defaultRunOptions": {
-    "build": "latest",
-    "memoryMbytes": 2048,
-    "timeoutSecs": 300
-  }
+    "memoryMbytes": 1024,
+    "timeoutSecs": 300,
+    "build": "latest"
+  },
+  "environmentVariables": [
+    {
+      "name": "UPWORK_USER_NAME",
+      "description": "Your Upwork email or username"
+    },
+    {
+      "name": "UPWORK_USERNAME",
+      "description": "Optional duplicate username if used separately"
+    },
+    {
+      "name": "UPWORK_PASSWORD",
+      "description": "Your Upwork password"
+    },
+    {
+      "name": "CHROME_VERSIONS",
+      "description": "Chrome versions list"
+    },
+    {
+      "name": "MAX_ATTEMPTS",
+      "description": "Retry attempts"
+    }
+  ]
 }

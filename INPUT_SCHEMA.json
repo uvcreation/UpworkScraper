@@ -22,7 +22,7 @@
       "type": "string",
       "description": "Your Upwork account password.",
       "minLength": 1,
-      "editor": "password"
+      "editor": "textfield"
     }
   },
   "required": [

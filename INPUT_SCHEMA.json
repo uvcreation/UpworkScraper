@@ -14,7 +14,7 @@
       "title": "Upwork Username (Email)",
       "type": "string",
       "description": "Your Upwork account email address.",
-      "format": "email",
+      "minLength": 1,
       "editor": "textfield"
     },
     "UPWORK_PASSWORD": {

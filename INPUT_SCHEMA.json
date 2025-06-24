@@ -1,0 +1,30 @@
+{
+  "title": "UpworkScraper Input",
+  "type": "object",
+  "properties": {
+    "UPWORK_USER_NAME": {
+      "title": "Upwork User Name",
+      "type": "string",
+      "description": "Your first name as used on Upwork.",
+      "minLength": 1
+    },
+    "UPWORK_USERNAME": {
+      "title": "Upwork Username (Email)",
+      "type": "string",
+      "description": "Your Upwork account email address.",
+      "format": "email"
+    },
+    "UPWORK_PASSWORD": {
+      "title": "Upwork Password",
+      "type": "string",
+      "description": "Your Upwork account password.",
+      "minLength": 1,
+      "editor": "password"
+    }
+  },
+  "required": [
+    "UPWORK_USER_NAME",
+    "UPWORK_USERNAME",
+    "UPWORK_PASSWORD"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "name": "upwork-best-matches",
+  "language": "python",
+  "title": "Upwork Best Matches Scraper",
+  "main": "upwork_best_matches_scraper.py",
+  "buildTag": "python3.10"
+}

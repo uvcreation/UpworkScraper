@@ -5,31 +5,14 @@
   "description": "Scrapes best match jobs from Upwork using login credentials",
   "version": "0.1",
   "dockerfile": "./Dockerfile",
+  "input": "./INPUT_SCHEMA.json",
   "defaultRunOptions": {
     "memoryMbytes": 1024,
     "timeoutSecs": 300,
     "build": "latest"
   },
-  "environmentVariables": [
-    {
-      "name": "UPWORK_USER_NAME",
-      "description": "Your Upwork email or username"
-    },
-    {
-      "name": "UPWORK_USERNAME",
-      "description": "Optional duplicate username if used separately"
-    },
-    {
-      "name": "UPWORK_PASSWORD",
-      "description": "Your Upwork password"
-    },
-    {
-      "name": "CHROME_VERSIONS",
-      "description": "Chrome versions list"
-    },
-    {
-      "name": "MAX_ATTEMPTS",
-      "description": "Retry attempts"
-    }
-  ]
+  "environmentVariables": {
+    "APIFY_HEADLESS": "1",
+    "APIFY_XVFB": "1"
+  }
 }

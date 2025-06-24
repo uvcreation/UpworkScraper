@@ -9,8 +9,8 @@ RUN apt-get update && apt-get install -y \
     make \
     && rm -rf /var/lib/apt/lists/*
 
-# Switch back to the default user
-USER myuser
+# Don't switch users - stay as root or let Apify handle it
+# USER myuser  <-- Remove this line
 
 # Copy your project files
 COPY . ./
